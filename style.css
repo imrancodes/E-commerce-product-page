@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+.hidden{
+    display: none;
+}
+
+.visibilty{
+    visibility: hidden;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+}
+
+.nav-part-1{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav-part-2{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links ul{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links ul li a{
+    text-decoration: none;
+    color: #68707d;
+    font-weight: 400;
+}
+
+.nav-links ul li a:hover{
+    color: #000000;
+}
+
+.nav-links ul li{
+    list-style: none;
+}
+
+.profile img{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.profile img:hover{
+    border: 2px solid #ff7d1a;
+    border-radius: 50%;
+}
+
+.cart{
+    cursor: pointer;
+}
+
+.cart i{
+    font-size: 25px;
+}
+
+.cart-item-no{
+    height: 10px;
+    width: 18px;
+    background-color: #ff7d1a;
+    color: white;
+    border-radius: 20px;
+    font-size: 8px;
+    text-align: center;
+    position: sticky;
+    top: 36px;
+}
+
+.cart-detail{
+    margin-top: 5px;
+    position: absolute;
+    /* top: 50px;
+    right: 80px; */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    z-index: 5;
+}
+
+.cart-product-img{
+    height: 60px;
+    width: 60px;
+    border-radius: 8px;
+}
+
+.cart-info-display{
+    display: flex;
+}
+
+.cart-info{
+    align-items: center;
+    gap: 20px;
+    padding: 25px 20px;
+}
+
+.cart-info-text{
+    color: #68707d;
+}
+
+.cart-price{
+    color: black;
+}
+
+.delete-icon{
+    color: #b6bcc8;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.cart-detail h2{
+    font-weight: 700;
+    font-size: 20px;
+    padding:15px 20px;
+}
+
+.checkout-btn{
+    padding: 0px 20px 25px 20px;
+}
+
+.checkout-btn button{
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: hsl(26, 100%, 55%);
+}
+
+.cart-empty{
+    color: #68707d;
+    font-size: 20px;
+    padding: 50px;
+}
+
+.line{
+    position: relative;
+    background-color: #b6bcc8;
+    z-index: 0;
+}
