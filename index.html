@@ -34,30 +34,71 @@
             <div class="cart">
                 <div class="cart-item-no">0</div>
                 <i class="ri-shopping-cart-line"></i>
-                <div class="cart-detail">
-                    <h2>Cart</h2>
-                    <hr class="cart-line">
-                    <div class="cart-info cart-info-display">
-                        <img class="cart-product-img" src="images/image-product-1-thumbnail.jpg" alt="sneakers">
-                        <div class="cart-info-text">
-                            <p class="cart-sneaker-name">Fall Limited Edition Sneakers</p>
-                            <p class="price">$125.00 x <span class="quantity">3</span> <b class="cart-price">$375.00</b>
-                            </p>
-                        </div>
-                        <i class="ri-delete-bin-6-line delete-icon"></i>
-                    </div>
-                    <div class="checkout-btn">
-                        <button>Checkout</button>
-                    </div>
-                    <h1 class="cart-empty hidden">Your cart is empty.</h1>
-                </div>
             </div>
             <div class="profile">
                 <img src="images/image-avatar.png" alt="profile">
             </div>
         </div>
     </nav>
-    <hr class="line">
+    <div class="cart-detail hidden">
+        <h2>Cart</h2>
+        <div class="cart-line"></div>
+        <div class="cart-info hidden">
+            <img class="cart-product-img" src="images/image-product-1-thumbnail.jpg" alt="sneakers">
+            <div class="cart-info-text">
+                <p class="cart-sneaker-name">Fall Limited Edition Sneakers</p>
+                <p class="price">$125.00 x <span class="quantity">3</span> <b class="cart-price">$375.00</b>
+                </p>
+            </div>
+            <i class="ri-delete-bin-6-line delete-icon"></i>
+        </div>
+        <div class="checkout-btn hidden">
+            <button>Checkout</button>
+        </div>
+        <h1 class="cart-empty">Your cart is empty.</h1>
+    </div>
+    <div class="line"></div>
+    <div class="product-details">
+        <div class="product-image">
+            <img src="images/image-product-1.jpg" alt="" class="main-img">
+            <div class="thumbnail-container">
+                <div class="thumbnail-box box-1 selected-img">
+                    <!-- <img src="images/image-product-1-thumbnail.jpg" alt="" class="thumbnail-img selected-img"> -->
+                </div>
+                <div class="thumbnail-box box-2">
+                    <!-- <img src="images/image-product-2-thumbnail.jpg" alt="" class="thumbnail-img"> -->
+                </div>
+                <div class="thumbnail-box box-3">
+                    <!-- <img src="images/image-product-3-thumbnail.jpg" alt="" class="thumbnail-img"> -->
+                </div>
+                <div class="thumbnail-box box-4">
+                    <!-- <img src="images/image-product-4-thumbnail.jpg" alt="" class="thumbnail-img"> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product-description">
+            <h6>SNEAKER COMPANY</h6>
+            <h1>Fall Limited Edition <br class="break"> Sneakers</h1>
+            <p class="detail">
+                These low-profile sneakers are your perfect casual wear <br>companion. Featuring a durable rubber outer sole, they'll <br>withstand everything the weather can offer.
+            </p>
+            <h2 class="price">$125.00</h2>
+            <span class="discount">50%</span>
+            <h3 class="previous-price">$250.00</h3>
+            <div class="quantity-detail">
+                <div class="quantity-box">
+                    <button class="less"><i class="ri-subtract-line"></i></button>
+                    <p class="quantity-no">0</p>
+                    <button class="more"><i class="ri-add-line"></i></button>
+                </div>
+                <button class="add-to-cart">
+                    <i class="ri-shopping-cart-line"></i>
+                    <span>Add to Cart</span>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
