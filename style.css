@@ -83,8 +83,9 @@ nav{
     border-radius: 20px;
     font-size: 8px;
     text-align: center;
-    position: sticky;
-    top: 36px;
+    position: relative;
+    top: 8px;
+    right: -12px;
 }
 
 .cart-detail{
