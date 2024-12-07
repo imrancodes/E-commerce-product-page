@@ -17,10 +17,31 @@ const detailImg = document.querySelector('.detail-img')
 const closeBtn = document.querySelector('.close-btn')
 const mainFrame = document.querySelector('.main-frame')
 const thumbnailDetailBox = document.querySelectorAll('.thumbnail-detail-img')
-const leftArrow = document.querySelector('.left')
-const rightArrow = document.querySelector('.right')
+const leftArrow = document.querySelectorAll('.left')
+const rightArrow = document.querySelectorAll('.right')
+const hamArea = document.querySelector('.ham-menu')
+const navArea = document.querySelector('.nav-links')
+const navLinks = document.querySelectorAll('.nav-link')
+const closeMenu = document.querySelector('.close-menu')
 
+// Responsive Hamburger
 
+hamArea.addEventListener('click', () => {
+    hamArea.classList.add('active')
+    navArea.classList.add('active')
+})
+
+closeMenu.addEventListener('click', () => {
+    hamArea.classList.remove('active')
+    navArea.classList.remove('active')
+})
+
+navLinks.forEach((navLink) => {
+    navLink.addEventListener('click', () => {
+        hamArea.classList.remove('active')
+        navArea.classList.remove('active')
+    })
+})
 
 cart.addEventListener('click', () => {
     cartDetail.classList.toggle('hidden')
@@ -132,33 +153,38 @@ let detailSrc = Number(mainFrame.src.split('/')[4].split('-')[2].split('.')[0])
 
 thumbnailFunc(thumbnailDetailBox, thumbnailBox)
 
-
-rightArrow.addEventListener('click', () => {
-    detailSrc++
-    if (detailSrc > thumbnailBox.length) {  
-        detailSrc = 1
-    }
-    mainFrame.src = `images/image-product-${detailSrc}.jpg`
-    mainImg.src = `images/image-product-${detailSrc}.jpg`
-
-    updateSelectedThumbnail(thumbnailBox)
-    updateSelectedThumbnail(thumbnailDetailBox)
+rightArrow.forEach((right)=>{
+    right.addEventListener('click', () => {
+        detailSrc++
+        if (detailSrc > thumbnailBox.length) {
+            detailSrc = 1
+        }
+        mainFrame.src = `images/image-product-${detailSrc}.jpg`
+        mainImg.src = `images/image-product-${detailSrc}.jpg`
+    
+        updateSelectedThumbnail(thumbnailBox)
+        updateSelectedThumbnail(thumbnailDetailBox)
+    })
 })
 
-leftArrow.addEventListener('click', ()=>{
-    detailSrc--
-    if (detailSrc < 1) {  
-        detailSrc = 4
-    }
-    mainFrame.src = `images/image-product-${detailSrc}.jpg`
-    mainImg.src = `images/image-product-${detailSrc}.jpg`
 
-    updateSelectedThumbnail(thumbnailBox)
-    updateSelectedThumbnail(thumbnailDetailBox)
+leftArrow.forEach((left)=>{
+    left.addEventListener('click', () => {
+        detailSrc--
+        if (detailSrc < 1) {
+            detailSrc = 4
+        }
+        mainFrame.src = `images/image-product-${detailSrc}.jpg`
+        mainImg.src = `images/image-product-${detailSrc}.jpg`
+    
+        updateSelectedThumbnail(thumbnailBox)
+        updateSelectedThumbnail(thumbnailDetailBox)
+    })
 })
+
 
 function updateSelectedThumbnail(thumbnailBox) {
-    thumbnailBox.forEach((thumbnail, index)=>{
+    thumbnailBox.forEach((thumbnail, index) => {
         thumbnail.classList.remove('selected-img')
 
         if (index + 1 === Number(detailSrc)) {
